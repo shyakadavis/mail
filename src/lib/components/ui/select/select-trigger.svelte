@@ -3,11 +3,14 @@
 	import ChevronsUpDown from 'lucide-svelte/icons/chevrons-up-down';
 	import { cn } from '$lib/utils';
 
-	type $$Props = SelectPrimitive.TriggerProps;
+	type $$Props = SelectPrimitive.TriggerProps & {
+		hide_caret: boolean;
+	};
 	type $$Events = SelectPrimitive.TriggerEvents;
 
 	let className: $$Props['class'] = undefined;
-	export { className as class };
+	let hide_caret: $$Props['hide_caret'] = false;
+	export { className as class, hide_caret };
 </script>
 
 <SelectPrimitive.Trigger
@@ -21,7 +24,10 @@
 	on:keydown
 >
 	<slot {builder} />
-	<div>
-		<ChevronsUpDown class="h-4 w-4 opacity-50" />
-	</div>
+
+	{#if !hide_caret}
+		<div>
+			<ChevronsUpDown class="h-4 w-4 opacity-50" />
+		</div>
+	{/if}
 </SelectPrimitive.Trigger>

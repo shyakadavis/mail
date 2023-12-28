@@ -25,6 +25,7 @@
 				is_collapsed && 'flex size-9 shrink-0 items-center justify-center p-0'
 			)}
 			aria-label="Select account"
+			hide_caret={is_collapsed}
 		>
 			<svelte:component
 				this={accounts.find((account) => account.email === selected_account.email)?.icon}
