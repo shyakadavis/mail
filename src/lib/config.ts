@@ -9,10 +9,13 @@ import ShoppingCart from 'lucide-svelte/icons/shopping-cart';
 import Trash2 from 'lucide-svelte/icons/trash-2';
 import Users from 'lucide-svelte/icons/users';
 
+import type { ComponentType } from 'svelte';
+import type { Icon } from 'lucide-svelte';
+
 export type Route = {
 	title: string;
 	label: string;
-	icon: typeof Archive;
+	icon: ComponentType<Icon>;
 	variant: 'default' | 'ghost';
 };
 

@@ -32,7 +32,7 @@
 	<div class="flex items-center p-2">
 		<div class="flex items-center gap-2">
 			<Tooltip.Root openDelay={0}>
-				<Tooltip.Trigger asChild let:builder>
+				<Tooltip.Trigger asChild let:builder id="archive_tooltip">
 					<Button builders={[builder]} variant="ghost" size="icon" disabled={!mail}>
 						<Archive class="size-4" />
 						<span class="sr-only">Archive</span>
@@ -41,7 +41,7 @@
 				<Tooltip.Content>Archive</Tooltip.Content>
 			</Tooltip.Root>
 			<Tooltip.Root openDelay={0}>
-				<Tooltip.Trigger asChild let:builder>
+				<Tooltip.Trigger asChild let:builder id="move_to_junk_tooltip">
 					<Button builders={[builder]} variant="ghost" size="icon" disabled={!mail}>
 						<ArchiveX class="size-4" />
 						<span class="sr-only">Move to junk</span>
@@ -50,7 +50,7 @@
 				<Tooltip.Content>Move to junk</Tooltip.Content>
 			</Tooltip.Root>
 			<Tooltip.Root openDelay={0}>
-				<Tooltip.Trigger asChild let:builder>
+				<Tooltip.Trigger asChild let:builder id="move_to_trash_tooltip">
 					<Button builders={[builder]} variant="ghost" size="icon" disabled={!mail}>
 						<Trash2 class="size-4" />
 						<span class="sr-only">Move to trash</span>
@@ -61,8 +61,8 @@
 			<Separator orientation="vertical" class="mx-1 h-6" />
 			<Tooltip.Root openDelay={0}>
 				<Popover.Root portal={null}>
-					<Tooltip.Trigger asChild let:builder={tooltip_builder}>
-						<Popover.Trigger asChild let:builder={popover_builder}>
+					<Tooltip.Trigger asChild let:builder={tooltip_builder} id="snooze_tooltip">
+						<Popover.Trigger asChild let:builder={popover_builder} id="snooze_popover">
 							<Button
 								builders={[tooltip_builder, popover_builder]}
 								variant="ghost"
@@ -112,7 +112,7 @@
 		</div>
 		<div class="ml-auto flex items-center gap-2">
 			<Tooltip.Root openDelay={0}>
-				<Tooltip.Trigger asChild let:builder>
+				<Tooltip.Trigger asChild let:builder id="reply_tooltip">
 					<Button builders={[builder]} variant="ghost" size="icon" disabled={!mail}>
 						<Reply class="size-4" />
 						<span class="sr-only">Reply</span>
@@ -121,7 +121,7 @@
 				<Tooltip.Content>Reply</Tooltip.Content>
 			</Tooltip.Root>
 			<Tooltip.Root openDelay={0}>
-				<Tooltip.Trigger asChild let:builder>
+				<Tooltip.Trigger asChild let:builder id="reply_all_tooltip">
 					<Button builders={[builder]} variant="ghost" size="icon" disabled={!mail}>
 						<ReplyAll class="size-4" />
 						<span class="sr-only">Reply all</span>
@@ -130,7 +130,7 @@
 				<Tooltip.Content>Reply all</Tooltip.Content>
 			</Tooltip.Root>
 			<Tooltip.Root openDelay={0}>
-				<Tooltip.Trigger asChild let:builder>
+				<Tooltip.Trigger asChild let:builder id="forward_tooltip">
 					<Button builders={[builder]} variant="ghost" size="icon" disabled={!mail}>
 						<Forward class="size-4" />
 						<span class="sr-only">Forward</span>
@@ -141,7 +141,7 @@
 		</div>
 		<Separator orientation="vertical" class="mx-2 h-6" />
 		<DropdownMenu.Root>
-			<DropdownMenu.Trigger asChild let:builder>
+			<DropdownMenu.Trigger asChild let:builder id="more_options_dropdown">
 				<Button builders={[builder]} variant="ghost" size="icon" disabled={!mail}>
 					<MoreVertical class="size-4" />
 					<span class="sr-only">More</span>

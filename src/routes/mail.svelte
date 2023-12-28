@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '../styles/panes.pcss';
 	import { Pane, Splitpanes } from 'svelte-splitpanes';
 
 	import AccountSwitcher from './account-switcher.svelte';
@@ -43,13 +44,3 @@
 		<MailDisplay mail={mails.find((item) => item.id === $mail_store.selected) || null} />
 	</Pane>
 </Splitpanes>
-
-<style lang="postcss">
-	:global(.splitpanes__pane) {
-		@apply !bg-transparent;
-	}
-
-	:global(.default-theme.splitpanes--vertical > .splitpanes__splitter) {
-		@apply !w-[1.5px] !border-l-[1.5px] !border-border;
-	}
-</style>
