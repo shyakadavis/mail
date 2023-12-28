@@ -1,0 +1,6 @@
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qshadcn-svelte Mail Example\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qx svelte-splitpanes en lieu of react-resizable-panels.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qx svelte-time(built on dayjs) instead of date-fns.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qx good ol' svelte stores instead of jotai.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qx svelte-time(built on dayjs) en lieu of date-fns.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qx good ol' svelte stores en lieu of jotai.\\E$"}

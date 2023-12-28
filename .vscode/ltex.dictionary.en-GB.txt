@@ -1,0 +1,11 @@
+shadcn
+shadcn-svelte
+svelte-splitpanes
+react-resizable-panels
+dayjs
+date-fns
+Shadcn-svelte
+Popover
+Svelte-splitpanes
+jotai
+popover

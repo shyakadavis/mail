@@ -1,38 +1,31 @@
-# create-svelte
+# Shadcn-svelte mail example
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This is a simple attempt to recreate the [shadcn mail](https://ui.shadcn.com/examples/mail) using our very own [shadcn-svelte](https://www.shadcn-svelte.com/).
 
-## Creating a project
+A live demo can be found [here](https://mail.shyakadavis.me/).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 🌊
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+- [x] [svelte-splitpanes](https://github.com/orefalo/svelte-splitpanes) en lieu of [react-resizable-panels](https://github.com/bvaughn/react-resizable-panels).
+- [x] [svelte-time](https://github.com/metonym/svelte-time)(built on [dayjs](https://github.com/iamkun/dayjs/)) en lieu of [date-fns](https://github.com/date-fns/date-fns/).
+- [x] good ol' [svelte stores](https://svelte.dev/tutorial/writable-stores) en lieu of [jotai](https://github.com/pmndrs/jotai).
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Notes
 
-## Developing
+- Svelte-splitpanes was kind of limiting; will keep an eye out for a better alternative.
+- Svelte-time is actually really, really, simple & neat. Consider giving it a try and a star [here](https://github.com/metonym/svelte-time).
+- Shadcn-svelte is still yet to implement the [scroll-area](https://ui.shadcn.com/docs/components/scroll-area/) component, so I made a nasty hack.
+- Popover and Tooltip builders are sort of clashing with each other, even though I delegated both events to the button. Check out the tooltip/popover trigger [here](https://github.com/shyakadavis/mail/blob/main/src/routes/mail-display.svelte#L67). I tried switching around the order of the builders, but it was worse. That is the only reasonable compromise I could come up with.
+- Implement a better responsive design when I get the time.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+## 🚀
 
 ```bash
-npm run build
+git clone https://github.com/shyakadavis/mail.git
+
+cd mail
+
+pnpm i
+
+pnpm dev
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
