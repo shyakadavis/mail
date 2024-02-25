@@ -1,4 +1,10 @@
-# Shadcn-svelte mail example
+## Note
+
+A more accurate and robust implementation is now [live](https://www.shadcn-svelte.com/) thanks to [Hunter](https://github.com/huntabyte/)'s work on [PaneForge](http://www.paneforge.com/). If you're curious, details can be found [here](https://github.com/huntabyte/shadcn-svelte/pull/811).
+
+Consider this a keep for posterity's sake.
+
+## Shadcn-svelte mail example
 
 This is a simple attempt to recreate the [shadcn mail](https://ui.shadcn.com/examples/mail) using our very own [shadcn-svelte](https://www.shadcn-svelte.com/).
 
